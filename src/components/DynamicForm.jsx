@@ -145,7 +145,7 @@ export default function DynamicForm() {
                     onChange={(e) => {
                       const v = e.target.value;
                       setValues((prev) => ({ ...prev, [field.id]: v }));
-                      console.log("values:", { ...values, [field.id]: v });
+                      // console.log("values:", { ...values, [field.id]: v });
                     }}
                     className="border rounded-lg px-3 py-2"
                     placeholder={field.label}
@@ -163,7 +163,7 @@ export default function DynamicForm() {
                       onChange={(e) => {
                         const v = e.target.value;
                         setValues((prev) => ({ ...prev, [field.id]: v }));
-                        console.log("values:", { ...values, [field.id]: v });
+                        // console.log("values:", { ...values, [field.id]: v });
                       }}
                       className={`border rounded-lg px-3 py-2 ${
                         values[field.id] !== "" &&
@@ -194,10 +194,10 @@ export default function DynamicForm() {
                         ...prev,
                         [field.id]: e.target.value,
                       }));
-                      console.log("values:", {
-                        ...values,
-                        [field.id]: e.target.value,
-                      });
+                      // console.log("values:", {
+                      //   ...values,
+                      //   [field.id]: e.target.value,
+                      // });
                     }}
                   >
                     {!(options[field.id]?.length) && (
