@@ -29,6 +29,9 @@ export default function DynamicForm() {
         const res = await fetch(`${BASE_URL}/form`);
         if (!res.ok) throw new Error(`Hiba történt: ${res.status}`);
         const data = await res.json();
+
+        console.log("form response:", data);
+
         const fields = Array.isArray(data) ? data : (data?.fields ?? []);
         setSchema(fields);
 
